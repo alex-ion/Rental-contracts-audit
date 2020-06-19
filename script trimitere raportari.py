@@ -125,15 +125,7 @@ def trimitere_email(statie,fisier_excel,fisiere_de_atasat,optiune):
             """
         body = body+signature.semnatura()
     else:
-        body="""Salut,<p>
-            <p>
-            Am trecut in fisierul atasat cateva situatii identificate la rularea raportului de audit pentru luna din subiect.<p>
-            <B>Va rog ca pana pe data de """+zi_limita+""" ale lunii sa oferiti un raspuns pentru fiecare situatie mentionata in tabel, in coloana Explicatii.</B>
-            <p>
-            <p>
-            Daca pot fi de folos cu ceva pentru imbunatatirea situatiilor, va stau la dispozitie.<p>
-            <p>
-            Cu stima,
+        body="""
             """
         body = body+signature.semnatura()
     msg.attach(MIMEText(body, 'html'))

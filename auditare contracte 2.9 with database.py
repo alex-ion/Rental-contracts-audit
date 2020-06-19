@@ -79,9 +79,9 @@ class Contracte():
         global contracte_importate
         self.Contract=Contract
         if Brand=="A":
-            self.Brand="Avis"
+            self.Brand="brand1"
         elif Brand=="B":
-            self.Brand="Budget"
+            self.Brand="brand2"
         self.Status=Status
         self.LOR=LOR
         if Rezervare=="00000000  0":
@@ -222,7 +222,7 @@ for linie in lista_agenti:
     globals()[obiect] = Agenti(linie[0], linie[1], linie[2])
     
 for linie in lista_scrive:
-    if linie[10]=="Signing party" and linie[2]!="cancelled":# and "Budget" not in linie[3]:
+    if linie[10]=="Signing party" and linie[2]!="cancelled":# and "brand2" not in linie[3]:
         obiect = len(globals())
         globals()[obiect] = Scrive(linie[2], linie[3], linie[10], linie[11], linie[17], linie[21], linie[22], linie[25], linie[9],linie[19])
     
@@ -821,7 +821,7 @@ def toaterapoartele():
     raport19() #identificare incasare NSF pe contracte care nu sunt deschise pentru No Show
     raport20() #identificare contracte pe care difera numele intre contractul din Wizard si contractul din Scrive
     raport21() #incarcare ajustari
-    raport22() #incarcari raportari de la Avis Europe
+    raport22() #incarcari raportari de la brand1 Europe
     raport23() #long duration rentals
     raport24() #identificare taxare DIE pe grupe rezervate L si O
     raport25() #identificare contracte cu mocangeala mica sau downgrade hotie
